@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { minutesToDuration, secondsToDuration } from '../utils/duration';
 import classNames from '../utils/class-names';
 
 const SessionRunning = (props) => {
   return (
     <div>
-      {/* <span
-          className={classNames({
-            invisible: isSessionStopped,
-            visible: !isSessionStopped,
-          })}
-        /> */}
-
       {/* TODO: This area should show only when a focus or break session is running or pauses */}
 
       <div className="row mb-2">
@@ -19,8 +12,7 @@ const SessionRunning = (props) => {
           {/* TODO: Update message below to include current session (Focusing or On Break) and total duration */}
           <h2 data-testid="session-title">
             {props.sessionType === 'focus'
-              ? //need to import inputFocusTimer so this doesn't countdown
-                `Focusing for ${minutesToDuration(
+              ? `Focusing for ${minutesToDuration(
                   props.inputFocusTime
                 )} minutes`
               : `On Break for ${minutesToDuration(

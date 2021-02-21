@@ -1,16 +1,20 @@
 {
   "name": "pomodoro-timer",
+  "homepage": "https://smabbett.github.io/Project_Pomodoro_Timer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.1",
     "@testing-library/react": "10.4.7",
     "@testing-library/user-event": "12.0.11",
+    "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
