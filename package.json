@@ -1,6 +1,6 @@
 {
   "name": "pomodoro-timer",
-  "homepage": "https://smabbett.github.io/Project_Pomodoro_Timer",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,8 +14,9 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "vercel --prod",
     "start": "react-scripts start",
+    "prebuild": "CI=true react-scripts test --colors",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
